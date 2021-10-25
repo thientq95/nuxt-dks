@@ -10,7 +10,7 @@
           <marquee>
             <ul>
               <li v-for="item in hotNews" :key="item.id">
-                <NuxtLink :to="item.url">{{ item.tieuDe }}</NuxtLink>
+                <a :href="item.url">{{ item.tieuDe }}</a>
               </li>
             </ul>
           </marquee>
@@ -35,7 +35,7 @@
                       v-for="(item, iNews) in group.items.slice(0, 4)"
                       :key="item.id"
                     >
-                      <NuxtLink :to="item.url" class="row">
+                      <a :href="item.url" class="row">
                         <div
                           class="image"
                           :class="iNews === 0 ? 'col-12' : 'col-5'"
@@ -58,7 +58,7 @@
                             >
                           </h3>
                         </div>
-                      </NuxtLink>
+                      </a>
                     </div>
                   </div>
                   <div class="col-lg-6">
@@ -67,7 +67,7 @@
                       v-for="item in group.items.slice(4, 10)"
                       :key="item.id"
                     >
-                      <NuxtLink :to="item.url" class="row">
+                      <a :href="item.url" class="row">
                         <div class="image col-5">
                           <img
                             @error="setFallbackImageUrl"
@@ -81,7 +81,7 @@
                             {{ item.tieuDe }}
                           </h3>
                         </div>
-                      </NuxtLink>
+                      </a>
                     </div>
                   </div>
                 </div>

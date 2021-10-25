@@ -84,7 +84,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <NuxtLink to="/lien-he" class="nav-link">Liên hệ</NuxtLink>
+                  <a href="/lien-he" class="nav-link">Liên hệ</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-md-0 d-lg-block d-none">
@@ -110,7 +110,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <!-- <a class="nav-link" href="#"
+                  <a class="nav-link" href="#"
                     ><img
                       class="mr-1"
                       style="height: 15px"
@@ -118,8 +118,8 @@
                       alt="english"
                     />
                     ENGLISH</a
-                  > -->
-                  <a>
+                  >
+                  <!-- <a>
                     <img
                       class="mr-1"
                       style="height: 15px"
@@ -127,7 +127,7 @@
                       alt="english"
                     />
                     ENGLISH
-                  </a>
+                  </a> -->
                 </li>
               </ul>
             </div>
@@ -152,9 +152,9 @@
             <nav>
               <ul>
                 <li>
-                  <NuxtLink to="/" class="active main-menu-link">
+                  <a href="/" class="active main-menu-link">
                     <i class="fas fa-home"></i>
-                  </NuxtLink>
+                  </a>
                 </li>
                 <li>
                   <a href="">Giới thiệu</a>
