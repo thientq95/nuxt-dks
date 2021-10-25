@@ -14,7 +14,7 @@ export default {
   },
 
   async asyncData({ $http, store }) {
-    const response = await $http.post("http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/Websites/GetCauHinhForWeb", {
+    const response = await $http.post("http://gatewaycms.tks.edu.vn/api/v1/CMS/Websites/GetCauHinhForWeb", {
       cultureId: 1
     }).then(res => res.json());
 
@@ -22,7 +22,7 @@ export default {
   },
 
   async fetch() {
-    const response = await this.$http.post("http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/Websites/GetCauHinhForWeb", {
+    const response = await this.$http.post("http://gatewaycms.tks.edu.vn/api/v1/CMS/Websites/GetCauHinhForWeb", {
       cultureId: 1
     }).then(res => res.json());
 

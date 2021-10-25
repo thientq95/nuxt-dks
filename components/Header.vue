@@ -152,9 +152,9 @@
             <nav>
               <ul>
                 <li>
-                  <a href="/" class="active main-menu-link">
+                  <NuxtLink to="/" class="active main-menu-link">
                     <i class="fas fa-home"></i>
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li>
                   <a href="">Giới thiệu</a>

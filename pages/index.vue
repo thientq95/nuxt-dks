@@ -43,7 +43,7 @@
                           <img
                             @error="setFallbackImageUrl"
                             :src="
-                              `${$store.getters['config-web/getMediaUrl']}${item.pathHinhDaiDien}`
+                              `${$store.getters['config-web/getMediaUrl']}${item.hinhDaiDien}`
                             "
                           />
                         </div>
@@ -72,7 +72,7 @@
                           <img
                             @error="setFallbackImageUrl"
                             :src="
-                              `${$store.getters['config-web/getMediaUrl']}${item.pathHinhDaiDien}`
+                              `${$store.getters['config-web/getMediaUrl']}${item.hinhDaiDien}`
                             "
                           />
                         </div>
@@ -116,7 +116,7 @@
                         <img
                           @error="setFallbackImageUrl"
                           :src="
-                            `${$store.getters['config-web/getMediaUrl']}${item.pathHinhDaiDien}`
+                            `${$store.getters['config-web/getMediaUrl']}${item.hinhDaiDien}`
                           "
                         />
                       </div>
@@ -200,7 +200,7 @@ export default {
 
     this.lefTopNews = await this.$http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetListForDanhMuc`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetListForDanhMuc`,
         {
           arrIdsDanhMuc: pIdLeftTops,
           cultureId: 1,
@@ -229,7 +229,7 @@ export default {
 
     this.bottomNews = await this.$http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetListForDanhMuc`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetListForDanhMuc`,
         {
           arrIdsDanhMuc: pIdBottoms,
           cultureId: 1,
@@ -251,7 +251,7 @@ export default {
 
     this.hotNews = await this.$http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetList`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetList`,
         {
           cultureId: 1,
           isNew: true,
@@ -264,7 +264,7 @@ export default {
 
     this.vanBanPhapLuats = await this.$http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebVanBanPhapLuats/GetList`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebVanBanPhapLuats/GetList`,
         {
           cultureId: 1,
           pageNumber: 1,

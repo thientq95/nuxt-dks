@@ -46,7 +46,7 @@ export default {
 
     this.items = await this.$http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebVideos/GetList`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebVideos/GetList`,
         {
           cultureId: 1,
           pageNumber: 1,

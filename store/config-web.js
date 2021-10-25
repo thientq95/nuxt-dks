@@ -1,6 +1,6 @@
 export const state = () => ({
     configs: [],
-    mediaUrl: 'http://tkmedia.vnu.epmt.com.vn:2051/'
+    mediaUrl: 'http://gatewaycms.tks.edu.vn/'
 })
 
 export const mutations = {

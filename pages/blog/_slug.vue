@@ -21,7 +21,7 @@
                     <img
                       @error="setFallbackImageUrl"
                       :src="
-                        `${$store.getters['config-web/getMediaUrl']}${item.pathHinhDaiDien}`
+                        `${$store.getters['config-web/getMediaUrl']}${item.hinhDaiDien}`
                       "
                     />
                   </div>
@@ -67,7 +67,7 @@ export default {
     const slug = params.slug;
     const newsCatagory = await $http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetDanhMucByAlias`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetDanhMucByAlias`,
         {
           alias: slug.split(".")[0],
           cultureId: 1,
@@ -79,7 +79,7 @@ export default {
 
     const news = await $http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetList`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetList`,
         {
           arrIdsDanhMuc: [newsCatagory.id],
           cultureId: 1,

@@ -41,7 +41,7 @@
                       <img
                         @error="setFallbackImageUrl"
                         :src="
-                          `${$store.getters['config-web/getMediaUrl']}${item.pathHinhDaiDien}`
+                          `${$store.getters['config-web/getMediaUrl']}${item.hinhDaiDien}`
                         "
                       />
                     </div>
@@ -66,7 +66,7 @@
                     <img
                       @error="setFallbackImageUrl"
                       :src="
-                        `${$store.getters['config-web/getMediaUrl']}${item.pathHinhDaiDien}`
+                        `${$store.getters['config-web/getMediaUrl']}${item.hinhDaiDien}`
                       "
                     />
                   </div>
@@ -88,7 +88,7 @@ export default {
     const slug = params.slug;
     const news = await $http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetByAlias`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetByAlias`,
         {
           alias: slug,
           cultureId: 1
@@ -99,7 +99,7 @@ export default {
 
     const relatedNews = await $http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetList`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetList`,
         {
           isNew: null,
           isNoiBat: null,
@@ -117,7 +117,7 @@ export default {
 
     const hotNews = await $http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetList`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebTinTucs/GetList`,
         {
           isNew: true,
           isNoiBat: null,

@@ -61,7 +61,7 @@ export default {
 
     this.nganhDaoTaos = await this.$http
       .post(
-        `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebNganhDaoTaos/GetListForDanhMuc`,
+        `http://gatewaycms.tks.edu.vn/api/v1/CMS/WebNganhDaoTaos/GetListForDanhMuc`,
         {
           arrIdsNhom: pIds,
           cultureId: 1,
