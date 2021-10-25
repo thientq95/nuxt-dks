@@ -36,7 +36,7 @@
                 :key="item.id"
               >
                 <div class="item">
-                  <NuxtLink :to="item.url">
+                  <NuxtLink :to="`/tin-tuc/${item.seoAlias}`">
                     <div class="img-cover">
                       <img
                         @error="setFallbackImageUrl"
@@ -60,7 +60,7 @@
           </div>
           <div class="blog_hot_news">
             <div class="item" v-for="item in hotNews" :key="item.id">
-              <NuxtLink :to="item.url" class="row">
+              <NuxtLink :to="`/tin-tuc/${item.seoAlias}`" class="row">
                 <div class="item_image col-5">
                   <div class="img-cover">
                     <img
@@ -90,7 +90,7 @@ export default {
       .post(
         `http://tk.apicms-gateway.epmt.com.vn:2051/api/v1/CMS/WebTinTucs/GetByAlias`,
         {
-          alias: slug.split(".")[0],
+          alias: slug,
           cultureId: 1
         }
       )

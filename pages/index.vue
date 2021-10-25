@@ -35,7 +35,7 @@
                       v-for="(item, iNews) in group.items.slice(0, 4)"
                       :key="item.id"
                     >
-                      <a :href="item.url" class="row">
+                      <a :href="`/tin-tuc/${item.seoAlias}`" class="row">
                         <div
                           class="image"
                           :class="iNews === 0 ? 'col-12' : 'col-5'"
@@ -67,7 +67,7 @@
                       v-for="item in group.items.slice(4, 10)"
                       :key="item.id"
                     >
-                      <a :href="item.url" class="row">
+                      <a :href="`/tin-tuc/${item.seoAlias}`" class="row">
                         <div class="image col-5">
                           <img
                             @error="setFallbackImageUrl"
